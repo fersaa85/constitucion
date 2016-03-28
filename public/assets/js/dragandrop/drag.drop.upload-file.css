@@ -1,0 +1,43 @@
+
+.dragandropUploadFile{
+	border:2px dotted #0B85A1;
+	width: inherit;
+	color:#92AAB0;
+	text-align:left;
+	vertical-align:middle;
+	padding:10px;
+	font-size: 150%;
+	margin-bottom:10px;
+	text-align: center;
+}
+
+
+.upload-images{
+	width: 400px;
+	float: left;
+	margin: 0 20px;
+	padding: 10px;
+	border: 2px solid gray; 
+}
+
+.dragandropUploadFile{
+	height: 120px;
+	margin: 15px;
+}
+.uploadedImages a{
+	float: right; 
+	margin-top: 55px;
+}
+.uploadedImages textarea{
+	width: 400px;
+	height: 100px;
+}
+
+
+form[name=frmUsers]{
+	width: 720px;
+	float: left;
+}
+form[name=frmImages]{
+	border: 0px;
+}

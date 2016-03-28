@@ -1,0 +1,433 @@
+
+body{
+    background: url(../images/bg-background.jpg) no-repeat;
+    background-size: 100% auto;
+}
+.clear{
+    clear: both;
+}
+.bg-green{
+   background-color: #007e47;
+}
+.bg-grey{
+    padding: 20px;
+    background: #f0f0f0;
+}
+
+.clear-padding{
+    padding: 0px;
+}
+
+.color-white{
+    color: #fff;
+}
+.color-red{
+    color: #dc0814;
+}
+
+.line-grey-right{
+    border-right: solid 2px #646466;
+}
+
+.line-grey-bottom{
+    padding-bottom: 15px;
+    border-bottom: solid 2px;
+}
+
+.line-grey-bottom-dotted{
+    border-bottom: dotted 2px;
+}
+
+.text-decoration-none{
+    text-decoration: none;
+}
+
+/*********
+ * navbar
+ ********/
+.navbar-default {
+    background-color: transparent;
+    border: 0px;
+    margin-bottom: 0px;
+}
+.navbar-default .container{
+    background-color: #25200d;
+    padding-right: 0px;
+    padding-left: 0px;
+}
+.navbar-default .navbar-nav > li > a{
+    width: 140px;
+    color: #fff !important;
+}
+
+.navbar-default .navbar-nav > .active > a,
+.navbar-default .navbar-nav > .active > a:hover,
+.navbar-default .navbar-nav > .active > a:focus {
+    color: #fff;
+    background-color: #007e47;
+}
+
+.navbar-default .navbar-nav > li > a .vertical-white-line {
+    width: 1px;
+    height: 45px;
+    background: #fff;
+    display: block;
+    position: absolute;
+    top: 12px;
+    left: 140px;
+}
+
+.navbar-default .navbar-nav > li > a .vertical-white-line-right {
+    left: -5px;
+}
+
+
+
+.dropdown-menu{
+    background-color: #25200d;
+}
+
+.navbar-default .dropdown-menu > li > a{
+    width: 140px;
+    color: #fff !important;
+    height: 60px;
+}
+.dropdown-menu > li > a{
+    white-space: normal;
+}
+.dropdown-menu > li > a:hover,
+.dropdown-menu > li > a:focus {
+    color: #eb0813 !important;
+    text-decoration: none;
+    background-color: #25200d;
+}
+
+
+/*********
+ * sub nabvar
+ ********/
+.navbar-subar{
+    padding-right: 0px;
+    padding-left: 0px;
+
+}
+.navigation-map {
+    background: #f0f0f0;
+}
+
+.social-network {
+    margin-top: 5px;
+}
+
+.social-network li{
+    float: right;
+    display: block;
+    width: 30px;
+    height: 30px;
+    margin: 0 2px;
+    background: #25200d;
+}
+.social-network li a{
+    display: block;
+    width: 30px;
+    height: 30px;
+}
+.social-network li a.facebook {
+     background: url('../images/icon-facebook.png') no-repeat;
+     background-size: contain ;
+ }
+.social-network li a.google {
+    background: url('../images/icon-google-plus.png') no-repeat;
+    background-size: contain ;
+}
+.social-network li a.linkedin {
+    background: url('../images/icon-linkedin.png') no-repeat;
+    background-size: contain ;
+}
+.social-network li a.rss {
+     background: url('../images/icon-rss.png') no-repeat;
+     background-size: contain ;
+ }
+.social-network li a.twitter {
+    background: url('../images/icon-twitter.png') no-repeat;
+    background-size: contain ;
+}
+.social-network li a.instagram {
+    background: url('../images/icon-instagram.png') no-repeat;
+    background-size: contain ;
+}
+
+
+
+
+/*********
+ * home
+ ********/
+.bg-senado{
+    padding: 0px 20px;
+    background: #fff;
+}
+.bg-senado-de-la-republica{
+    width: 170px;
+    height: 300px;
+    background-size: contain;
+    background-color: #fff;
+    background-image: url(../images/bg-senado-de-la-republica.png);
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+
+
+.col-buttoms{
+    padding-right: 0px;
+}
+.col-buttoms ul{
+    list-style: none;
+}
+
+.col-buttoms ul li a {
+    width: 202px;
+    display: block;
+    background: red;
+    float: right;
+    text-align: center;
+    color: #fff;
+    margin-bottom: 5px;
+    margin-top: 5px;
+    text-decoration: none;
+    padding: 10px 0px;
+}
+.col-buttoms ul li a.active {
+    background: #007e47;
+}
+
+
+.icon-download{
+    display: block;
+    width: 30px;
+    height: 30px;
+    background: url('../images/icon-descarga.png') no-repeat;
+    background-size: contain;
+    position: absolute;
+    MARGIN-top: -35px;
+    margin-left: 165px;
+}
+
+.buttom-image{
+    width: 325px;
+    margin: 0 auto;
+    display: block;
+}
+
+
+
+/*********
+ * register / register-optional
+ ********/
+form[name=frmRegister]{
+    padding: 20px;
+    background: #f0f0f0;
+}
+form[name=frmRegister] input{
+    border: 0px;
+    margin: 5px 0px;
+}
+
+form[name=frmRegister] input[name=submit]{
+    width:100%;
+    padding:  10px;
+    background: #007e47;
+    color: #fff;
+    font-weight: bold;
+}
+
+form[name=frmRegister] .buttom-later{
+    width:100%;
+    padding:  10px;
+    background: #dc0814;
+    color: #fff;
+    display: block;
+    text-align: center;
+}
+
+
+/*********
+ * search
+ ********/
+
+.search-constitution{
+    list-style: none;
+    margin-bottom: 10px;
+    padding: 0px;
+
+}
+
+.search-constitution li{
+    float: left;
+    display: block;
+    width: 120px;
+    height: 60px;
+    background: #25200d;
+    padding: 10px;
+    position: relative;
+}
+
+.search-constitution li.active{
+    background-color: #007e47;
+}
+
+.search-constitution li a{
+    color: #fff;
+    text-decoration: none;
+}
+
+.search-constitution  > li > a .vertical-white-line {
+    width: 1px;
+    height: 35px;
+    background: #fff;
+    display: block;
+    position: absolute;
+    top: 12px;
+    left: 119px;
+}
+
+.icon-search{
+    position: relative;
+    width: 30px;
+    top: -32px;
+    left: 5px;
+}
+
+/*********
+ * search list
+ ********/
+.content-article{
+    max-height: 300px;
+    overflow-y: scroll;
+    overflow: hidden;
+    overflow-y: scroll;
+    margin-bottom: 30px;
+}
+
+.buttom-new-search{
+    padding: 10px;
+    margin: 0 auto;
+    background: #25200d;
+    color: #fff !important;
+    font-weight: bold;
+    display: block;
+    width: 150px;
+    text-align: center;
+    text-decoration: none !important;
+}
+
+
+/*********
+ * essay
+ ********/
+.dropzone{
+    width: 500px;
+    height: 200px;
+    background: #fff;
+    margin: 0 auto;
+    border: dashed 5px #b1b1b1;
+}
+.dropzone  .dz-message p {
+    width: 300px;
+    margin: 30px auto 0px auto;
+}
+.dropzone  .dz-message p span{
+    display: block;
+    padding: 5px 10px;
+    background: #dc0814;
+    color: #fff;
+}
+.dz-details,
+.dz-image{
+    display: none !important;
+}
+
+.buttom-register {
+    padding: 10px;
+    margin: 20px auto;
+    background: #007e47;
+    color: #fff !important;
+    font-weight: bold;
+    display: block;
+    width: 150px;
+    text-decoration: none !important;
+}
+/*********
+ * footer tricolor
+ ********/
+
+.bg-red{
+    background: #dc0814;
+}
+.bg-tricolor{
+    background: url(../images/bg-tricolor.jpg);
+    height: 55px;
+    display: block;
+    margin-top: 20px;
+}
+
+/*********
+ * footer
+ ********/
+footer{
+    background: #25200d;
+    color: #fff;
+    padding: 30px;
+}
+
+
+
+
+/*********
+ * modal dialog
+ ********/
+.modalDialog {
+    position: fixed;
+    font-family: Arial, Helvetica, sans-serif;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: rgba(0,0,0,0.8);
+    z-index: 99999;
+    opacity:0;
+    -webkit-transition: opacity 400ms ease-in;
+    -moz-transition: opacity 400ms ease-in;
+    transition: opacity 400ms ease-in;
+    pointer-events: auto;
+}
+
+.modalDialog:target {
+    opacity:1;
+    pointer-events: auto;
+}
+
+.modalDialog > div {
+    width: 400px;
+    position: relative;
+    margin: 10% auto;
+    padding: 5px 20px 13px 20px;
+    border-radius: 10px;
+    background: #fff;
+    background: -moz-linear-gradient(#fff, #999);
+    background: -webkit-linear-gradient(#fff, #999);
+    background: -o-linear-gradient(#fff, #999);
+}
+
+
+.buttom-join-now{
+    display: block;
+    width: 150px;
+    padding: 10px;
+    background: #25200d;
+    color: #fff !important;
+    margin: 5px auto;
+    text-align: center;
+    text-decoration: none;
+}
