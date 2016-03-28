@@ -15,13 +15,17 @@ use Response;
 use Session;
 use Storage;
 use URL;
+<<<<<<< HEAD
 use Cookie;
+=======
+>>>>>>> 0ea6e23229b8d37dbc8a6c0f769d451cacc4cd32
 use Validator;
 use View;
 
 //use Form;
 //use Image;
 
+<<<<<<< HEAD
 use App\Models\Register;
 use App\Models\Constitucion;
 session_start();
@@ -197,4 +201,21 @@ class WebController extends Controller
 
         return Response::json(array("model"=>false,));
     }
+=======
+
+class WebController extends Controller
+{
+    /**
+     * Display a listing of the resource.
+     *
+     * @return \Illuminate\Http\Response
+     */
+    public function getIndex()
+    {
+        return View::make('web.register');
+    }
+
+	
+
+>>>>>>> 0ea6e23229b8d37dbc8a6c0f769d451cacc4cd32
 }

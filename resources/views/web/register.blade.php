@@ -1,5 +1,6 @@
 @extends('template')
 
+<<<<<<< HEAD
 @section('title')
     <p>registro</p>
 @stop()
@@ -36,4 +37,8 @@
 
 
 
+=======
+@section('body')
+<h1>hello word</h1>
+>>>>>>> 0ea6e23229b8d37dbc8a6c0f769d451cacc4cd32
 @stop()
