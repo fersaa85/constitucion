@@ -1,5 +1,9 @@
 @extends('template')
 
+@section('title')
+    <p class="title">participacion / registro</p>
+@stop()
+
 @section('body')
     <section class="container">
         <div class="col-md-2"></div>

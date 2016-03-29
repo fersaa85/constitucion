@@ -1,5 +1,11 @@
 @extends('template')
 
+
+@section('title')
+    <p class="title">Busqueda de articulos / resultados</p>
+@stop()
+
+
 @section('body')
 
     <section class="container">

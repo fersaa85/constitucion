@@ -15,19 +15,17 @@ use Response;
 use Session;
 use Storage;
 use URL;
-<<<<<<< HEAD
 use Cookie;
-=======
->>>>>>> 0ea6e23229b8d37dbc8a6c0f769d451cacc4cd32
 use Validator;
 use View;
 
 //use Form;
 //use Image;
 
-<<<<<<< HEAD
 use App\Models\Register;
 use App\Models\Constitucion;
+use App\Models\Questinarie;
+
 session_start();
 
 
@@ -36,6 +34,9 @@ class WebController extends Controller
 
     public function getIndex()
     {
+        Cookie::forget('email', '/');
+        Cookie::forget('essay', '/');
+        Cookie::forget('questinarie', '/');
         return View::make('web.home');
     }
 
@@ -144,6 +145,28 @@ class WebController extends Controller
     }
 
 
+    public function postQuestinarie(){
+
+        $Questinarie = new Questinarie( Request::all() );
+        $Questinarie->save();
+
+
+        Session::flash('thanks', true);
+        Cookie::queue("questinarie",  $Questinarie->id, (60*24*365));
+
+
+        if(!empty(Cookie::get('email'))){
+            return Redirect::back();
+        }else{
+            return Redirect::to('web/registro');
+        }
+
+
+
+
+    }
+
+
 
     private function  getRedirect(){
         $option = Session::get('option');
@@ -154,7 +177,7 @@ class WebController extends Controller
             $redirect = 'ensayo';
         }
         else{
-            $redirect = 'ensayo';
+            $redirect = 'cuestinario';
         }
         return Redirect::to("web/$redirect");
     }
@@ -171,15 +194,18 @@ class WebController extends Controller
 
             if(Cookie::get('essay')){
                 $Register->essay = Cookie::get('essay');
+
+
             }
 
             if(Cookie::get('questinarie')){
                 $Register->questinarie = Cookie::get('questinarie');
             }
+
             $Register->save();
-
-            return Response::json(array("model"=>true,));
-
+            if (Request::ajax()) {
+                return Response::json(array("model" => true,));
+            }
         }
 
 
@@ -188,34 +214,22 @@ class WebController extends Controller
 
             if(Cookie::has('essay')){
                 $Register->essay = Cookie::get('essay');
+
             }
 
             if(Cookie::has('questinarie')){
                 $Register->questinarie = Cookie::get('questinarie');
             }
 
-
+            $Register->save();
 
         }
 
+        if (Request::ajax()){
+            return Response::json(array("model"=>false,));
+        }
+        return Redirect::back();
 
-        return Response::json(array("model"=>false,));
+
     }
-=======
-
-class WebController extends Controller
-{
-    /**
-     * Display a listing of the resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
-    public function getIndex()
-    {
-        return View::make('web.register');
-    }
-
-	
-
->>>>>>> 0ea6e23229b8d37dbc8a6c0f769d451cacc4cd32
 }

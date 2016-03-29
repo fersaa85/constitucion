@@ -1,5 +1,9 @@
 @extends('template')
 
+@section('title')
+    <p class="title">participacion / registro / ensayo</p>
+@stop()
+
 @section('body')
 
     <section class="container">

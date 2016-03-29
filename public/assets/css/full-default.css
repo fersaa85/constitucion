@@ -42,6 +42,12 @@ body{
     text-decoration: none;
 }
 
+.title{
+    padding-top: 5px;
+    text-transform: uppercase;
+    margin-bottom: 5px;
+}
+
 /*********
  * navbar
  ********/
@@ -358,6 +364,252 @@ form[name=frmRegister] .buttom-later{
     width: 150px;
     text-decoration: none !important;
 }
+
+
+
+/*
+ * questinarie
+ */
+
+
+.opcion {
+    width:25%;
+    height:50px;
+    background-color:#23200e;
+    cursor:pointer;
+    color:#FFFFFF;
+    margin:5px;
+    padding-top: 15px;
+    float:left;
+    position:relative;
+    text-align:center;
+}
+
+.opcion2 {
+    width:20%;
+    height:50px;
+    background-color:#23200e;
+    cursor:pointer;
+    color:#FFFFFF;
+    margin:5px;
+    padding-top: 15px;
+    float:left;
+    position:relative;
+    text-align:center;
+}
+
+.opcion3 {
+    width:30%;
+    height:70px;
+    background-color:#23200e;
+    cursor:pointer;
+    color:#FFFFFF;
+    margin:5px;
+    padding-top: 5px;
+    float:left;
+    position:relative;
+    text-align:center;
+}
+
+.opcion4 {
+    width:25%;
+    height:50px;
+    background-color:#23200e;
+    cursor:pointer;
+    color:#FFFFFF;
+    margin:5px;
+    padding-top: 5px;
+    float:left;
+    position:relative;
+    text-align:center;
+}
+
+.opcion5 {
+    width:25%;
+    height:80px;
+    background-color:#23200e;
+    cursor:pointer;
+    color:#FFFFFF;
+    margin:5px;
+    padding-top: 5px;
+    float:left;
+    position:relative;
+    text-align:center;
+}
+
+.opcion6 {
+    width:30%;
+    height:70px;
+    background-color:#23200e;
+    cursor:pointer;
+    color:#FFFFFF;
+    margin:5px;
+    padding-top: 5px;
+    float:left;
+    position:relative;
+    text-align:center;
+}
+
+.opcion7 {
+    width:35%;
+    height:90px;
+    background-color:#23200e;
+    cursor:pointer;
+    color:#FFFFFF;
+    margin:5px;
+    padding-top: 5px;
+    float:left;
+    position:relative;
+    text-align:center;
+}
+
+.opcion8 {
+    width:35%;
+    height:65px;
+    background-color:#23200e;
+    cursor:pointer;
+    color:#FFFFFF;
+    margin:5px;
+    padding-top: 5px;
+    float:left;
+    position:relative;
+    text-align:center;
+}
+
+
+
+.bg-red {
+    background-color:#d90914;
+}
+
+.selecionado2 {
+    background-color:#d90914;
+    color:#FFFFFF;
+    margin:5px;
+    padding:10px;
+    float:left;
+    position:relative;
+    text-align:center;
+
+}
+
+#chequed{display:none;}
+
+input[type=text] {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    box-sizing: border-box;
+}
+
+.primera-linea {
+    width:35%;
+    height:70px;
+
+    float:left;
+    position:relative;
+    margin:5px;
+    padding:10px;
+}
+
+.segunda-linea {
+    width:95%;
+    height:140px;
+
+    float:left;
+    position:relative;
+    margin:5px;
+    padding:10px;
+}
+
+.pregunta-dos {
+    width:90%;
+    height:100px;
+
+    float:left;
+    position:relative;
+    margin:5px;
+    padding:10px;
+}
+
+.pregunta-tres {
+    width:90%;
+    height:240px;
+
+    float:left;
+    position:relative;
+    margin:5px;
+    padding:10px;
+}
+
+.pregunta-seis {
+    width:90%;
+    height:240px;
+
+    float:left;
+    position:relative;
+    margin:5px;
+    padding:10px;
+}
+
+.pregunta-siete {
+    width:90%;
+    height:280px;
+
+    float:left;
+    position:relative;
+    margin:5px;
+    padding:10px;
+}
+
+.pregunta-ocho {
+    width:90%;
+    height:240px;
+
+    float:left;
+    position:relative;
+    margin:5px;
+    padding:10px;
+}
+
+.enviar {
+    background-color: #027f47;
+    color: #FFFFFF;
+    margin: 0 auto;
+    text-align: center;
+    padding: 10px;
+    border: 0px;
+    display: block;
+}
+
+hr{
+    display: block;
+    -webkit-margin-before: 0.5em;
+    -webkit-margin-after: 0.5em;
+    -webkit-margin-start: auto;
+    -webkit-margin-end: auto;
+    border-style: inset;
+    border-width: 1px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 /*********
  * footer tricolor
  ********/

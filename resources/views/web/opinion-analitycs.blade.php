@@ -1,5 +1,9 @@
 @extends('template')
 
+@section('title')
+    <p class="title">Opinion y Analisis de interes</p>
+@stop()
+
 @section('body')
 
     <section class="container">
