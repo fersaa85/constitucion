@@ -1,3 +1,9 @@
+@import url("../fonts/stylesheet.css");
+
+
+p,a,span,div,h1,h2,h3,h4,h5,label{
+    font-family: nexa_regularregular;
+}
 
 body{
     background: url(../images/bg-background.jpg) no-repeat;
@@ -47,6 +53,20 @@ body{
     text-transform: uppercase;
     margin-bottom: 5px;
 }
+
+.font-bold{
+    font-weight: bold;
+}
+
+h1{
+    font-weight: bold;
+}
+
+section{
+  min-height: 600px;
+}
+
+
 
 /*********
  * navbar
@@ -224,6 +244,7 @@ body{
     width: 325px;
     margin: 0 auto;
     display: block;
+    margin-top: 20px;
 }
 
 
@@ -257,6 +278,10 @@ form[name=frmRegister] .buttom-later{
     text-align: center;
 }
 
+form[name=frmRegister] select{
+    margin-bottom: 10px;
+}
+
 
 /*********
  * search
@@ -272,11 +297,12 @@ form[name=frmRegister] .buttom-later{
 .search-constitution li{
     float: left;
     display: block;
-    width: 120px;
+    width: 185px;
     height: 60px;
     background: #25200d;
-    padding: 10px;
+    padding: 10px 30px;
     position: relative;
+    text-transform: uppercase;
 }
 
 .search-constitution li.active{
@@ -295,13 +321,13 @@ form[name=frmRegister] .buttom-later{
     display: block;
     position: absolute;
     top: 12px;
-    left: 119px;
+    left: 184px;
 }
 
 .icon-search{
     position: relative;
     width: 30px;
-    top: -32px;
+    top: -39px;
     left: 5px;
 }
 
@@ -328,6 +354,9 @@ form[name=frmRegister] .buttom-later{
     text-decoration: none !important;
 }
 
+form[name=frmSearch] input[name=search]{
+    padding-left: 50px;
+}
 
 /*********
  * essay
@@ -373,7 +402,7 @@ form[name=frmRegister] .buttom-later{
 
 
 .opcion {
-    width:25%;
+    width:30%;
     height:50px;
     background-color:#23200e;
     cursor:pointer;
@@ -386,7 +415,7 @@ form[name=frmRegister] .buttom-later{
 }
 
 .opcion2 {
-    width:20%;
+    width:24%;
     height:50px;
     background-color:#23200e;
     cursor:pointer;
@@ -399,81 +428,56 @@ form[name=frmRegister] .buttom-later{
 }
 
 .opcion3 {
-    width:30%;
-    height:70px;
-    background-color:#23200e;
-    cursor:pointer;
-    color:#FFFFFF;
-    margin:5px;
+    width: 49%;
+    height: 80px;
+    background-color: #23200e;
+    cursor: pointer;
+    color: #FFFFFF;
+    margin: 5px;
     padding-top: 5px;
-    float:left;
-    position:relative;
-    text-align:center;
+    float: left;
+    position: relative;
+    text-align: center;
+    padding: 10px 40px;
 }
 
-.opcion4 {
-    width:25%;
-    height:50px;
-    background-color:#23200e;
-    cursor:pointer;
-    color:#FFFFFF;
-    margin:5px;
+.opcion4,
+.opcion5{
+    width: 32%;
+    /* height: 50px; */
+    background-color: #23200e;
+    cursor: pointer;
+    color: #FFFFFF;
+    margin: 5px;
     padding-top: 5px;
-    float:left;
-    position:relative;
-    text-align:center;
+    float: left;
+    position: relative;
+    text-align: center;
+    padding: 20px;
+}
+.opcion5{
+    padding: 5px 20px;
+    height: 80px
 }
 
-.opcion5 {
-    width:25%;
-    height:80px;
-    background-color:#23200e;
-    cursor:pointer;
-    color:#FFFFFF;
-    margin:5px;
-    padding-top: 5px;
-    float:left;
-    position:relative;
-    text-align:center;
-}
 
-.opcion6 {
-    width:30%;
-    height:70px;
-    background-color:#23200e;
-    cursor:pointer;
-    color:#FFFFFF;
-    margin:5px;
+.opcion6,
+.opcion7,
+.opcion8{
+    width: 49%;
+    height: 80px;
+    background-color: #23200e;
+    cursor: pointer;
+    color: #FFFFFF;
+    margin: 5px;
     padding-top: 5px;
-    float:left;
-    position:relative;
-    text-align:center;
+    float: left;
+    position: relative;
+    text-align: center;
+    padding: 10px 40px;
 }
-
-.opcion7 {
-    width:35%;
-    height:90px;
-    background-color:#23200e;
-    cursor:pointer;
-    color:#FFFFFF;
-    margin:5px;
-    padding-top: 5px;
-    float:left;
-    position:relative;
-    text-align:center;
-}
-
-.opcion8 {
-    width:35%;
-    height:65px;
-    background-color:#23200e;
-    cursor:pointer;
-    color:#FFFFFF;
-    margin:5px;
-    padding-top: 5px;
-    float:left;
-    position:relative;
-    text-align:center;
+.opcion7{
+    height: auto;
 }
 
 
@@ -503,9 +507,7 @@ input[type=text] {
 }
 
 .primera-linea {
-    width:35%;
     height:70px;
-
     float:left;
     position:relative;
     margin:5px;
@@ -513,9 +515,7 @@ input[type=text] {
 }
 
 .segunda-linea {
-    width:95%;
     height:140px;
-
     float:left;
     position:relative;
     margin:5px;
@@ -523,7 +523,7 @@ input[type=text] {
 }
 
 .pregunta-dos {
-    width:90%;
+    width:100%;
     height:100px;
 
     float:left;
@@ -533,44 +533,22 @@ input[type=text] {
 }
 
 .pregunta-tres {
-    width:90%;
     height:240px;
-
     float:left;
     position:relative;
     margin:5px;
     padding:10px;
 }
 
-.pregunta-seis {
-    width:90%;
-    height:240px;
-
-    float:left;
+.pregunta-seis,
+.pregunta-siete,
+.pregunta-ocho{
+     float:left;
     position:relative;
     margin:5px;
     padding:10px;
 }
 
-.pregunta-siete {
-    width:90%;
-    height:280px;
-
-    float:left;
-    position:relative;
-    margin:5px;
-    padding:10px;
-}
-
-.pregunta-ocho {
-    width:90%;
-    height:240px;
-
-    float:left;
-    position:relative;
-    margin:5px;
-    padding:10px;
-}
 
 .enviar {
     background-color: #027f47;
@@ -590,13 +568,34 @@ hr{
     -webkit-margin-end: auto;
     border-style: inset;
     border-width: 1px;
+    margin-top: 10px;
+    margin-bottom: 10px;
 }
 
 
+form[name=frmQuestinarie]{
+    padding: 40px;
+}
 
+.cero-margin-padding{
+    margin: 0px;
+    padding:  0px;
+}
+.margin-top-bottom{
+    margin: 10px 0;
+}
 
+.div-sex{
+    left: 30px;
+}
+.div-radio{
+    margin-left: 0px;
+    font-weight: bold;
+}
 
-
+.box-50{
+    width: 50px;
+}
 
 
 
@@ -639,37 +638,15 @@ footer{
 /*********
  * modal dialog
  ********/
-.modalDialog {
-    position: fixed;
-    font-family: Arial, Helvetica, sans-serif;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    background: rgba(0,0,0,0.8);
-    z-index: 99999;
-    opacity:0;
-    -webkit-transition: opacity 400ms ease-in;
-    -moz-transition: opacity 400ms ease-in;
-    transition: opacity 400ms ease-in;
-    pointer-events: auto;
+.modal-dialog{
+    width: 300px;
+    margin-top: 15%;
 }
+.modal-dialog .modal-content{
+    background: #e4e4e4;
+    text-align: center;
 
-.modalDialog:target {
-    opacity:1;
-    pointer-events: auto;
-}
-
-.modalDialog > div {
-    width: 400px;
-    position: relative;
-    margin: 10% auto;
-    padding: 5px 20px 13px 20px;
-    border-radius: 10px;
-    background: #fff;
-    background: -moz-linear-gradient(#fff, #999);
-    background: -webkit-linear-gradient(#fff, #999);
-    background: -o-linear-gradient(#fff, #999);
+    padding: 20px;
 }
 
 
@@ -681,5 +658,7 @@ footer{
     color: #fff !important;
     margin: 5px auto;
     text-align: center;
-    text-decoration: none;
+    text-decoration: none !important;
+    text-transform: uppercase;
+    font-weight: bold;
 }

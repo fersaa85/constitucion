@@ -6,8 +6,8 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>Laravel</title>
 
-	{!! Html::style('assets/css/bootstrap.css') !!}
-	{!! Html::style('assets/css/full-default.css') !!}
+	{!! HTML::style('assets/css/bootstrap.css') !!}
+	{!! HTML::style('assets/css/full-default.css') !!}
 
 	<!-- Fonts -->
 	<link href='//fonts.googleapis.com/css?family=Roboto:400,300' rel='stylesheet' type='text/css'>
@@ -64,16 +64,26 @@
 			</div>
 			<div class="col-md-3 social-network">
 				<ul>
-					<li><a href="" class="rss"></a></li>
-					<li><a href="" class="instagram"></a></li>
-					<li><a href="" class="linkedin"></a></li>
-					<li><a href="" class="google"></a></li>
-					<li><a href="" class="twitter"></a></li>
-					<li><a href="" class="facebook"></a></li>
+					<li><a href="http://www.gob.mx/presidencia/"  target="_blank" class="rss"></a></li>
+					<li><a href="http://www.gob.mx/presidencia/" target="_blank" class="instagram"></a></li>
+					<li><a href="http://www.gob.mx/presidencia/" target="_blank" class="linkedin"></a></li>
+					<li><a href="http://www.gob.mx/presidencia/" target="_blank" class="google"></a></li>
+					<li><a href="https://twitter.com/presidenciamx?lang=es" target="_blank" class="twitter"></a></li>
+					<li><a href="https://www.facebook.com/PresidenciaMX/" target="_blank" class="facebook"></a></li>
 				</ul>
 			</div>
 		</div>
 	</div>
+
+
+
+	@if ( !$errors->isEmpty() ):
+		<div class="container">
+			<div class="alert alert-danger" role="alert">
+				<p class="alert-link">El e-mail ya se encuentra registrado, por favor ingrese un mail diferente</p>
+			</div>
+		</div>
+	@endif
 
 
 	@yield('body')
@@ -98,14 +108,14 @@
 	<div class="row-fluid bg-red">
 		<div class="container bg-tricolor text-center color-white">
 
-			<p>"El contenido de esta pagina es de carater informativo"</p>
+			<p style="font-size: 11px; padding-top: 5px;">"Es un hecho establecido hace demasiado tiempo que un lector se distraerá con el<br /> contenido del texto de un sitio mientras que mira su diseño.<br /> El punto de usar Lorem Ipsum es que tiene una distribución más o menos normal de las letras, al c"</p>
 		</div>
 
 	</div>
 
 	<footer>
 		<div class="container">
-			<div class="col-md-2">
+			<div class="col-md-2 text-center">
 				{!!  HTML::image('assets/images/logo-blanco.png') !!}
 			</div>
 			<div class="col-md-4">
@@ -141,15 +151,15 @@
 
 	</footer>
 	<!-- Scripts -->
-	{!! Html::script('http://code.jquery.com/jquery-1.12.2.min.js') !!}
-	{!! Html::script('assets/js/bootstrap.min.js') !!}
+	{!! HTML::script('http://code.jquery.com/jquery-1.12.2.min.js') !!}
+	{!! HTML::script('assets/js/bootstrap.min.js') !!}
 
 
-	{!! Html::style('assets/js/jquery-ui-1.11.4/basic.min.css') !!}
-	{!! Html::script('assets/js/jquery-ui-1.11.4/dropzone.min.js') !!}
+	{!! HTML::style('assets/js/jquery-ui-1.11.4/basic.min.css') !!}
+	{!! HTML::script('assets/js/jquery-ui-1.11.4/dropzone.min.js') !!}
 
 
-	{!! Html::script('assets/js/full-default.js') !!}
+	{!! HTML::script('assets/js/full-default.js') !!}
 
 	<script>
 	$(document).ready(function () {
@@ -161,7 +171,8 @@
 				var imgName = response;
 				file.previewElement.classList.add("dz-success");
 				if( response.model ){
-					$("#openModalThanks").modal();
+					//$("#openModalThanks").modal();
+					window.location= '{{$site_domine}}';
 				}
 			},
 			error: function (file, response) {

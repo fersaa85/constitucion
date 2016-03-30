@@ -26,7 +26,7 @@
 
             {!! Form::submit('Enviar', ['class'=> 'submit', 'name'=>'submit']) !!}
             <p class="text-center">Campos obligatorios *</p>
-            <p class="text-center">Revisa nuestro <a href="" class="color-red"><strong>aviso de privacidad</strong></a></p>
+            <p class="text-center">Revisa nuestro <a href="#" class="color-red"><strong>aviso de privacidad</strong></a></p>
             {!! Form::close() !!}
         </div>
         <div class="col-md-4"></div>

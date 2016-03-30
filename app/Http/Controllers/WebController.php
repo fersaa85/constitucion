@@ -32,17 +32,29 @@ session_start();
 class WebController extends Controller
 {
 
+    public function __construct(){
+        View::share('site_domine', URL::to('/web') );
+    }
+
     public function getIndex()
     {
-        Cookie::forget('email', '/');
-        Cookie::forget('essay', '/');
-        Cookie::forget('questinarie', '/');
+        Cookie::queue(Cookie::forget('email'));
+        Cookie::queue(Cookie::forget('essay'));
+        Cookie::queue(Cookie::forget('questinarie'));
         return View::make('web.home');
     }
 
 
 
+    public function getRedirectOptions(){
+        Session::put('option',  Request::input('option'));
+        return $this->getRedirect();
+    }
+
     public function getRegistroOpcional(){
+        //Cookie::queue(Cookie::forget('email'));
+        //Cookie::queue(Cookie::forget('essay'));
+        //Cookie::queue(Cookie::forget('questinarie'));
         Session::put('option',  Request::input('option'));
         return View::make('web.register-optional');
     }
@@ -96,6 +108,15 @@ class WebController extends Controller
      */
 
     public function postRegister(){
+        $validator = Validator::make(  Request::all(), [
+            'email' => 'required|unique:register',
+        ]);
+        if ($validator->fails()) {
+            return Redirect::back()
+                ->withErrors($validator)
+                ->withInput();
+        }
+
         $Register = new Register( Request::all() );
         $Register->save();
 
@@ -107,11 +128,23 @@ class WebController extends Controller
 
 
     public function postRegisterContinue(){
+
+
+        $validator = Validator::make(  Request::all(), [
+                                                        'email' => 'required|unique:register',
+                                                    ]);
+        if ($validator->fails()) {
+            return Redirect::back()
+                    ->withErrors($validator)
+                    ->withInput();
+            }
+
+
         $Register = new Register( Request::all() );
         $Register->save();
 
         Cookie::queue("email", $Register->email, (60*24*365));
-        Session::flash('thanks', true);
+
 
         return $this->getRedirect();
 
@@ -146,17 +179,17 @@ class WebController extends Controller
 
 
     public function postQuestinarie(){
-
         $Questinarie = new Questinarie( Request::all() );
         $Questinarie->save();
 
 
-        Session::flash('thanks', true);
+
         Cookie::queue("questinarie",  $Questinarie->id, (60*24*365));
 
 
         if(!empty(Cookie::get('email'))){
-            return Redirect::back();
+            Session::flash('thanks', true);
+            return $this->getRegisterComplete();
         }else{
             return Redirect::to('web/registro');
         }
@@ -174,10 +207,10 @@ class WebController extends Controller
             $redirect = 'cuestinario';
         }
         else if($option == 'essay'){
-            $redirect = 'ensayo';
+            $redirect = 'reglas-ensayo';
         }
         else{
-            $redirect = 'cuestinario';
+            $redirect = 'reglas-ensayo';
         }
         return Redirect::to("web/$redirect");
     }
@@ -191,6 +224,7 @@ class WebController extends Controller
 
         if(!empty(Cookie::get('email'))){
             $Register = Register::where('email', '=', Cookie::get('email'))->first();
+
 
             if(Cookie::get('essay')){
                 $Register->essay = Cookie::get('essay');
@@ -228,7 +262,7 @@ class WebController extends Controller
         if (Request::ajax()){
             return Response::json(array("model"=>false,));
         }
-        return Redirect::back();
+        return Redirect::to('/web/index');
 
 
     }

@@ -1,7 +1,7 @@
 @extends('template')
 
 @section('title')
-    <p>registro</p>
+    <p class="title">participacion / cuestinario </p>
 @stop()
 
 @section('body')

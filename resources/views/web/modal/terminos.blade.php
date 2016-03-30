@@ -3,7 +3,7 @@
     <div class="modal-dialog">
         <!-- Modal content-->
         <div class="modal-content">
-            <h1>Debes aceptar los terminos para continuar</h1>
+            <p>Debes aceptar los terminos para continuar</p>
         </div>
     </div>
 </div>
