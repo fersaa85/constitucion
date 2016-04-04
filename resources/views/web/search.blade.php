@@ -1,7 +1,7 @@
 @extends('template')
 
 @section('title')
-    <p class="title">Busqueda de articulos</p>
+    <p class="title">Búsqueda de artículos</p>
 @stop()
 
 
@@ -10,7 +10,7 @@
     <section class="container">
         <div class="row">
             <div class="col-md-2"></div>
-            <div class="col-md-8"><h1 class="text-uppercase">Busqueda <br />de articulos</h1></div>
+            <div class="col-md-8"><h1 class="text-uppercase">Búsqueda <br />de artículos</h1></div>
             <div class="col-md-2"></div>
         </div>
 
@@ -19,11 +19,11 @@
         <div class="row">
             <div class="col-md-3"></div>
             <div class="col-md-6">
-                <h4 class="text-uppercase font-bold">En que Cosntitución <br />deseas buscar</h4>
+                <h4 class="text-uppercase font-bold">En que Constitución <br />deseas buscar</h4>
                 <ul class="search-constitution">
                     <li class="active"><a href="#">Cosntitución vigente<span class="vertical-white-line"></span></a></li>
-                    <li><a href="#">Cosntitución para niños<span class="vertical-white-line"></span></a></li>
-                    <li><a href="#">Dicionario</a></li>
+                    <li><a href="http://www.senado.gob.mx/index.php" target="_blank">Constitución para niños<span class="vertical-white-line"></span></a></li>
+                    <li><a href="http://www.senado.gob.mx/index.php" target="_blank">Diccíonario</a></li>
                     <div class="clear"></div>
                 </ul>
                 {!! Form::open(['url' => 'web/search', 'method'=> 'post', 'name'=>'frmSearch']) !!}

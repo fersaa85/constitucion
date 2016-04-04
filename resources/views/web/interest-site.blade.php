@@ -2,7 +2,7 @@
 
 
 @section('title')
-    <p class="title">Sitios de interes</p>
+    <p class="title">Sitios de interés</p>
 @stop()
 
 @section('body')
@@ -11,7 +11,7 @@
 
         <div class="row">
             <div class="col-md-2"></div>
-            <div class="col-md-8"> <h1>Sitios <br />de interes</h1></div>
+            <div class="col-md-8"> <h1>Sitios <br />de interés</h1></div>
             <div class="col-md-2"></div>
         </div>
 

@@ -3,8 +3,8 @@
     <div class="modal-dialog">
         <!-- Modal content-->
         <div class="modal-content">
-            <p>¿Comó desea participar ?</p>
-            <p>Te recordamos que puedes envuiar un cuestinario y/o un ensayo</p>
+            <p>¿Comó deseas participar?<br />Te recordamos que puedes<br /> enviar un cuestinario<br /> y/o un ensayo</p>
+            <p></p>
 
             <a href="registro-opcional?option=questinarie" class="buttom-join-now">Cuestinario</a>
 

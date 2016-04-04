@@ -9,25 +9,30 @@
     <section id="home" class="container">
 
             <div class="row">
-                <div class="col-md-9 clear-padding">
+                <div class="col-md-1"></div>
+                <div class="col-md-8 clear-padding-left-right">
                    <div class="pull-left bg-senado">
                         <div class="bg-senado-de-la-republica"></div>
                    </div>
-                   <div class="pull-left" style="padding: 20px; width: 660px;">
-                    <h1 class="text-uppercase">Consulta democrática sobre la cosntitución mexicana </h1>
-                    <h4>Es un hecho establecido hace demasiado tiempo que un lector se distraerá con el contenido del texto de un sitio mientras que mira su diseño. El punto de usar Lorem Ipsum es que tiene una distribución más o menos normal de las letras, </h4>
+                   <div class="pull-left bg-opacity-white">
+                    <h1 class="text-uppercase nexa_blackregular">Consulta democrática sobre la cosntitución mexicana </h1>
+                    <h4 class="nexa_boldregular">Es un hecho establecido hace demasiado tiempo que un lector se distraerá con el contenido del texto de un sitio mientras que mira su diseño. El punto de usar Lorem Ipsum es que tiene una distribución más o menos normal de las letras, </h4>
                    </div>
+
                 </div>
-                <div class="col-md-3 col-buttoms">
+                <div class="col-md-2 col-buttoms  clear-padding-left-right"">
                     <ul>
                         <li><a href="" class="text-uppercase">¿Qué es?</a></li>
-                        <li><a href="web/reglas-ensayo" class="text-uppercase">Bases de <br />participación<span class="icon-download"></span></a></li>
+                        <li><a href="assets/download/sample.pdf" target="_blank" class="text-uppercase">Bases de <br />participación<span class="icon-download"></span></a></li>
                         <li><a href="#" class="active text-uppercase join-now">Participar <br />ahora</a></li>
+
                     </ul>
                 </div>
+                <div class="col-md-1" ></div>
+
             </div>
 
-        <div class="row">
+        <div class="row margin-top-20">
             <div class="col-md-2">
 
             </div>

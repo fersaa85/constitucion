@@ -4,10 +4,11 @@
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<title>Laravel</title>
+	<title>CONSULTA DEMOCRÁTICA SOBRE LA COSNTITUCIÓN MEXICANA</title>
 
 	{!! HTML::style('assets/css/bootstrap.css') !!}
 	{!! HTML::style('assets/css/full-default.css') !!}
+	<link rel="shortcut icon" type="image/x-icon" href="../assets/images/icono.ico">
 
 	<!-- Fonts -->
 	<link href='//fonts.googleapis.com/css?family=Roboto:400,300' rel='stylesheet' type='text/css'>
@@ -25,41 +26,54 @@
 </head>
 <body>
 	<nav class="navbar navbar-default navbar-static-top">
-		<div class="container">
-			<div class="navbar-header">
-				<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
-					<span class="sr-only">Toggle navigation</span>
-					<span class="icon-bar"></span>
-					<span class="icon-bar"></span>
-					<span class="icon-bar"></span>
-				</button>
-			</div>
+		<div class="container clear-padding">
+			<div class="row">
+				<div class="col-md-1"></div>
+				<div class="col-md-10 bg-navbar clear-padding-left-right">
 
-			<div id="navbar" class="navbar-collapse collapse">
-				<ul class="nav navbar-nav">
-					<li class="dropdown active">
-						<a href="index" class="dropdown-toggle text-uppercase" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Cultura democratic <span class="vertical-white-line"></span></a>
-						<ul class="dropdown-menu">
-							<li><a href="#" class="text-uppercase">Opinión y analisis</a></li>
-							<li><a href="#" class="text-uppercase">Opinión y analisis</a></li>
+					<div class="navbar-header">
+						<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+							<span class="sr-only">Toggle navigation</span>
+							<span class="icon-bar"></span>
+							<span class="icon-bar"></span>
+							<span class="icon-bar"></span>
+						</button>
+					</div>
+
+					<div id="navbar" class="navbar-collapse collapse">
+						<ul class="nav navbar-nav">
+
+							<li class="dropdown {{ $viewshare['home'] or '' }}">
+								<a href="index" class="dropdown-toggle text-uppercase" data-toggle="dropdown" data-hover="dropdown" data-delay="1000" data-close-others="false" >
+									Cultura democrática <span class="vertical-white-line"></span>
+								</a>
+								<ul class="dropdown-menu">
+									<li class="{{ $viewshare['opinion-analitycs'] or '' }}"><a href="opinion-y-analisis" class="text-uppercase">Opinión y análisis</a></li>
+									<li class="{{ $viewshare['opinion-analitycs'] or '' }}"><a href="opinion-y-analisis" class="text-uppercase">Opinión y análisis</a></li>
+								</ul>
+							</li>
+
+							<li class="{{ $viewshare['participation'] or '' }}"><a href="http://www.diputados.gob.mx/" target="_blank" class="text-uppercase">Participación <span class="vertical-white-line"></span></a></li>
+							<li class="{{ $viewshare['general-guidelines'] or '' }}"><a href="lineamientos-generales" class="text-uppercase">Lineamientos generales <span class="vertical-white-line"></span></a></li>
+							<li class="{{ $viewshare['search'] or '' }}"><a href="busqueda" class="text-uppercase">Búsqueda de artículos <span class="vertical-white-line"></span></a></li>
+							<li class="{{ $viewshare['interest-site'] or '' }}"><a href="sitios-de-interes" class="text-uppercase">Sitios de interés</a></li>
 						</ul>
-					</li>
-					<li><a href="#" class="text-uppercase join-now">Participación <span class="vertical-white-line"></span></a></li>
-					<li><a href="opinion-y-analisis" class="text-uppercase">Lineamientos generales <span class="vertical-white-line"></span></a></li>
-					<li><a href="busqueda" class="text-uppercase">Busqueda de articulos <span class="vertical-white-line"></span></a></li>
-					<li><a href="sitios-de-interes" class="text-uppercase">Sitios de interes</a></li>
-				</ul>
 
-				<ul class="nav navbar-nav navbar-right">
-					<li><a href="#" class="text-uppercase"><span class="vertical-white-line vertical-white-line-right"></span>Resultados</a></li>
-				</ul>
-			</div><!--/.nav-collapse -->
+						<ul class="nav navbar-nav navbar-right">
+							<li><a href="#" class="text-uppercase"><span class="vertical-white-line vertical-white-line-right"></span>Resultados</a></li>
+						</ul>
+					</div><!--/.nav-collapse -->
+
+				</div>
+				<div class="col-md-1"></div>
+			</div>
 		</div>
 	</nav>
 
 	<div class="container navbar-subar">
 		<div class="row">
-			<div class="col-md-9 navigation-map">
+			<div class="col-md-1"></div>
+			<div class="col-md-7 navigation-map">
 				@yield('title')
 			</div>
 			<div class="col-md-3 social-network">
@@ -72,6 +86,7 @@
 					<li><a href="https://www.facebook.com/PresidenciaMX/" target="_blank" class="facebook"></a></li>
 				</ul>
 			</div>
+			<div class="col-md-1"></div>
 		</div>
 	</div>
 
@@ -94,7 +109,7 @@
 
 	<script>
 	@if( Session::has('thanks') )
-		thanks = {{ Session::get('thanks') }};
+		thanks = '{{ Session::get('thanks') }}';
 		@endif
 	</script>
 
@@ -106,9 +121,9 @@
 
 
 	<div class="row-fluid bg-red">
-		<div class="container bg-tricolor text-center color-white">
+		<div class="container bg-green text-center color-white">
 
-			<p style="font-size: 11px; padding-top: 5px;">"Es un hecho establecido hace demasiado tiempo que un lector se distraerá con el<br /> contenido del texto de un sitio mientras que mira su diseño.<br /> El punto de usar Lorem Ipsum es que tiene una distribución más o menos normal de las letras, al c"</p>
+			<p>"Es un hecho establecido hace demasiado tiempo que un lector se distraerá con el<br /> contenido del texto de un sitio mientras que mira su diseño.<br /> El punto de usar Lorem Ipsum es que tiene una distribución más o menos normal de las letras, al c"</p>
 		</div>
 
 	</div>
@@ -118,41 +133,76 @@
 			<div class="col-md-2 text-center">
 				{!!  HTML::image('assets/images/logo-blanco.png') !!}
 			</div>
-			<div class="col-md-4">
-				<h4>Constitución Mexicana</h4>
-				<div>
-					<ul>
-						<li>Informacion</li>
+			<div class="col-md-4 cero-paddig-left">
+				<h4 class="text-uppercase">Constitución Mexicana</h4>
+				<div class="row">
+					<ul class="col-lg-4">
+						<li>INFORMACIÓN</li>
+						<li><a href="">Boletines</a></li>
+						<li><a href="">Versiones</a></li>
+						<li><a href="">Agenda</a></li>
+						<li><a href="">Síntesis</a></li>
 					</ul>
-					<ul>
-						<li>Multimedia</li>
+					<ul class="col-lg-4">
+						<li>MULTIMEDIA</li>
+						<li><a href="">Fotografías</a></li>
+						<li><a href="">Videos</a></li>
+						<li><a href="">Audios</a></li>
+						<li><a href="">Infografías</a></li>
+						<li><a href="">En vivo</a></li>
 					</ul>
-					<ul>
-						<li>Otros</li>
+					<ul class="col-lg-4">
+						<li>OTROS</li>
+						<li><a href="">Estenografía</a></li>
+						<li><a href="" class="prelative">Senadores en redes sociales</a></li>
+						<li><a href="" class="prelative">Histórico de comunicación</a></li>
+						<li><a href="">Senado</a></li>
 					</ul>
 				</div>
 			</div>
-			<div class="col-md-4">
-				<h4>Senado de la republica</h4>
-				<div>
-					<ul>
-						<li>Informacion</li>
-					</ul>
-					<ul>
-						<li>Multimedia</li>
-					</ul>
-					<ul>
-						<li>Otros</li>
-					</ul>
-				</div>
+			<div class="col-md-1"></div>
+			<div class="col-md-4  cero-paddig-left">
+				<h4 class="text-uppercase">Senado de la república</h4>
 
+				<div class="row">
+					<ul class="col-lg-4">
+						<li>INFORMACIÓN</li>
+						<li><a href="">Boletines</a></li>
+						<li><a href="">Versiones</a></li>
+						<li><a href="">Agenda</a></li>
+						<li><a href="">Síntesis</a></li>
+					</ul>
+					<ul class="col-lg-4">
+						<li>MULTIMEDIA</li>
+						<li><a href="">Fotografías</a></li>
+						<li><a href="">Videos</a></li>
+						<li><a href="">Audios</a></li>
+						<li><a href="">Infografías</a></li>
+						<li><a href="">En vivo</a></li>
+					</ul>
+					<ul class="col-lg-4">
+						<li>OTROS</li>
+						<li><a href="">Estenografía</a></li>
+						<li><a href="" class="prelative">Senadores en redes sociales</a></li>
+						<li><a href="" class="prelative">Histórico de comunicación</a></li>
+						<li><a href="">Senado</a></li>
+					</ul>
+				</div>
 			</div>
+			<div class="col-md-1"></div>
+
 		</div>
 
 	</footer>
 	<!-- Scripts -->
+	<script>
+		var  site_domine= '{{$site_domine}}';
+	</script>
 	{!! HTML::script('http://code.jquery.com/jquery-1.12.2.min.js') !!}
 	{!! HTML::script('assets/js/bootstrap.min.js') !!}
+	{!! HTML::script('assets/js/bootstrap-hover-dropdown.min.js') !!}
+
+
 
 
 	{!! HTML::style('assets/js/jquery-ui-1.11.4/basic.min.css') !!}
@@ -172,7 +222,7 @@
 				file.previewElement.classList.add("dz-success");
 				if( response.model ){
 					//$("#openModalThanks").modal();
-					window.location= '{{$site_domine}}';
+					window.location = site_domine;
 				}
 			},
 			error: function (file, response) {

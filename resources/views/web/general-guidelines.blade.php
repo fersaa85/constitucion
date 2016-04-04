@@ -1,7 +1,7 @@
 @extends('template')
 
 @section('title')
-    <p class="title">Opinión y Análisis</p>
+    <p class="title">Lineamientos generales</p>
 @stop()
 
 @section('body')
@@ -9,7 +9,7 @@
     <section class="container">
         <div class="row">
             <div class="col-md-2"></div>
-            <div class="col-md-8"><h1 class="text-uppercase">Opinión y Análisis</h1></div>
+            <div class="col-md-8"><h1 class="text-uppercase">Lineamientos<br />Generales</h1></div>
             <div class="col-md-2"></div>
         </div>
 

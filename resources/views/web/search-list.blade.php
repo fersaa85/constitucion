@@ -2,7 +2,7 @@
 
 
 @section('title')
-    <p class="title">Busqueda de articulos / resultados</p>
+    <p class="title">Búsqueda de artículos / resultados</p>
 @stop()
 
 
@@ -11,7 +11,7 @@
     <section class="container">
         <div class="row">
             <div class="col-md-2"></div>
-            <div class="col-md-8"><h1 class="text-uppercase">Busqueda <br />de articulos</h1></div>
+            <div class="col-md-8"><h1 class="text-uppercase">Búsqueda <br />de artículos</h1></div>
             <div class="col-md-2"></div>
         </div>
 

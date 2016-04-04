@@ -1,8 +1,24 @@
 @import url("../fonts/stylesheet.css");
 
 
-p,a,span,div,h1,h2,h3,h4,h5,label{
+p,a,span,div,h2,h3,h4,h5,label{
     font-family: nexa_regularregular;
+}
+
+h1{
+    text-transform: uppercase;
+    font-family: nexa_blackregular;
+}
+
+.nexa_boldregular{
+    font-family: nexa_boldregular;
+}
+
+.nexa_lightregular{
+    font-family: nexa_lightregular;
+}
+.nexa_blackregular{
+    font-family: nexa_blackregular;
 }
 
 body{
@@ -23,7 +39,10 @@ body{
 .clear-padding{
     padding: 0px;
 }
-
+.clear-padding-left-right{
+    padding-left: 0px;
+    padding-right: 0px;
+}
 .color-white{
     color: #fff;
 }
@@ -33,6 +52,10 @@ body{
 
 .line-grey-right{
     border-right: solid 2px #646466;
+}
+
+.bg-grey div p:last-child{
+    margin-bottom: 0px;
 }
 
 .line-grey-bottom{
@@ -64,6 +87,13 @@ h1{
 
 section{
   min-height: 600px;
+  padding-left: 0px !important;
+  padding-right: 0px !important;
+}
+
+.nav > li{
+    display: inline-table;
+    height: 70px;
 }
 
 
@@ -76,19 +106,25 @@ section{
     border: 0px;
     margin-bottom: 0px;
 }
-.navbar-default .container{
+.navbar-default .bg-navbar{
     background-color: #25200d;
-    padding-right: 0px;
-    padding-left: 0px;
 }
 .navbar-default .navbar-nav > li > a{
     width: 140px;
     color: #fff !important;
+    display: table-cell;
+    vertical-align: middle;
+    font-family: nexa_boldregular, serif;
 }
 
 .navbar-default .navbar-nav > .active > a,
 .navbar-default .navbar-nav > .active > a:hover,
-.navbar-default .navbar-nav > .active > a:focus {
+.navbar-default .navbar-nav > .active > a:focus,
+.navbar-default .navbar-nav > li > a:hover,
+.navbar-default .navbar-nav > li > a:focus,
+.navbar-default .navbar-nav > .open > a,
+.navbar-default .navbar-nav > .open > a:hover,
+.navbar-default .navbar-nav > .open > a:focus{
     color: #fff;
     background-color: #007e47;
 }
@@ -104,13 +140,17 @@ section{
 }
 
 .navbar-default .navbar-nav > li > a .vertical-white-line-right {
-    left: -5px;
+    left: -1px;
 }
 
+.navbar-right{
+    margin-right: 0px;
+}
 
 
 .dropdown-menu{
     background-color: #25200d;
+    min-width: 141px;
 }
 
 .navbar-default .dropdown-menu > li > a{
@@ -128,6 +168,12 @@ section{
     background-color: #25200d;
 }
 
+.dropdown-menu > .active > a,
+.dropdown-menu > .active > a:hover,
+.dropdown-menu > .active > a:focus{
+    background: inherit;
+}
+
 
 /*********
  * sub nabvar
@@ -143,7 +189,11 @@ section{
 
 .social-network {
     margin-top: 5px;
+    padding-right: 0px;
+   padding-left: 0px;
 }
+
+
 
 .social-network li{
     float: right;
@@ -189,6 +239,9 @@ section{
 /*********
  * home
  ********/
+.margin-top-20{
+    margin-top: 20px;
+}
 .bg-senado{
     padding: 0px 20px;
     background: #fff;
@@ -203,6 +256,12 @@ section{
     background-position: center;
 }
 
+.bg-opacity-white{
+    background: rgba(255, 255, 255, 0.6);
+    padding: 20px;
+    width: 560px;
+    height: 300px;
+}
 
 
 .col-buttoms{
@@ -223,6 +282,7 @@ section{
     margin-top: 5px;
     text-decoration: none;
     padding: 10px 0px;
+    font-family: nexa_boldregular;
 }
 .col-buttoms ul li a.active {
     background: #007e47;
@@ -296,7 +356,7 @@ form[name=frmRegister] select{
 
 .search-constitution li{
     float: left;
-    display: block;
+    display: inline-table;
     width: 185px;
     height: 60px;
     background: #25200d;
@@ -312,6 +372,9 @@ form[name=frmRegister] select{
 .search-constitution li a{
     color: #fff;
     text-decoration: none;
+    display: table-cell;
+    vertical-align: middle;
+    font-family: nexa_boldregular, serif;
 }
 
 .search-constitution  > li > a .vertical-white-line {
@@ -590,7 +653,7 @@ form[name=frmQuestinarie]{
 }
 .div-radio{
     margin-left: 0px;
-    font-weight: bold;
+    font-family: nexa_boldregular;
 }
 
 .box-50{
@@ -622,6 +685,16 @@ form[name=frmQuestinarie]{
     display: block;
     margin-top: 20px;
 }
+.bg-green{
+    background: url(../images/bg-green.jpg) center;
+    display: block;
+    margin-top: 20px;
+    background-repeat-x: no-repeat;
+}
+.bg-green p{
+    margin: 10px;
+    font-size: 11px;
+}
 
 /*********
  * footer
@@ -629,10 +702,42 @@ form[name=frmQuestinarie]{
 footer{
     background: #25200d;
     color: #fff;
-    padding: 30px;
+    padding: 50px 0 60px 0;
 }
 
+footer ul{
+    list-style:  none;
+}
+footer ul li{
+    margin: 5px 0;
 
+}
+
+footer ul li:first-child{
+    text-transform: uppercase;
+    border-bottom: solid 2px #fff;
+    padding-bottom: 5px;
+    margin-top: 0px;
+    margin-bottom: 10px;
+}
+
+footer ul li a{
+    text-decoration: none !important;
+    color: #fff !important;
+    font-size: 12px;
+}
+
+footer ul li a.prelative{
+    position: relative;
+    width: 180px;
+    display: block;
+}
+.cero-paddig-left{
+    padding-left: 0px;
+}
+.cero-paddig-right{
+    padding-right: 0px;
+}
 
 
 /*********
@@ -645,7 +750,8 @@ footer{
 .modal-dialog .modal-content{
     background: #e4e4e4;
     text-align: center;
-
+    border: 0px;
+    border-radius: 0px;
     padding: 20px;
 }
 
@@ -661,4 +767,94 @@ footer{
     text-decoration: none !important;
     text-transform: uppercase;
     font-weight: bold;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* TABLETAS
+ All  screen (max-width: 10170)
+ min  screen  320px)
+*/
+@media only screen and (max-width: 1070px) {
+
+    .navbar-default .navbar-nav > li > a {
+        width: 135px;
+    }
+
+    .search-constitution li{
+        width: 140px;
+        padding: 10px;
+    }
+
+}
+
+
+/* CELULARES
+ All  screen (max-width: 750px)
+ min  screen  320px)
+*/
+@media only screen and (max-width: 750px) {
+
+
+    .clear-padding-left-right,
+    .social-network {
+        padding-right: 15px;
+        padding-left: 15px;
+    }
+
+
+
+    .bg-opacity-white{
+        width:  auto;
+        height: auto;
+    }
+
+    .bg-senado-de-la-republica{
+        display: none;
+    }
+
+    .col-buttoms ul{
+        padding: 0px;
+    }
+    .col-buttoms ul li a{
+        width: 100%;
+    }
+
+    .icon-download{
+        margin-left: 85%;
+    }
+
+
+    .dropzone{
+        width: auto;
+    }
+
+    .div-radio{
+        font-family: nexa_regularregular;
+        font-size: 11px;
+    }
+
+    .opcion, .opcion1, .opcion2,
+    .opcion3, .opcion4, .opcion5,
+    .opcion6, .opcion7, .opcion8{
+        padding: 5px;
+    }
+
+    .cero-margin-padding{
+        height: auto;
+    }
+
+    .modal-dialog{
+        width: 100%;
+    }
 }

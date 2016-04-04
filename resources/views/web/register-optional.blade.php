@@ -28,7 +28,7 @@
             {!! Form::submit('Enviar', ['class'=> 'submit', 'name'=>'submit']) !!}
             <a href="mas-tarde" class="buttom-later" >Mas tarde</a>
             <br />
-            <p class="text-center">Campos obligatorios * <br />Revisa nuestro <a href="#" class="color-red"><strong>aviso de privacidad</strong></a></p>
+            <p class="text-center">Campos obligatorios * <br />Revisa nuestro <a href="aviso-de-privacidad" class="color-red"><strong>aviso de privacidad</strong></a></p>
             {!! Form::close() !!}
         </div>
         <div class="col-md-4"></div>

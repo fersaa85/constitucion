@@ -33,7 +33,8 @@ class WebController extends Controller
 {
 
     public function __construct(){
-        View::share('site_domine', URL::to('/web') );
+        View::share('site_domine', URL::to('/web') . "/" );
+        View::share('viewshare', null);
     }
 
     public function getIndex()
@@ -41,6 +42,8 @@ class WebController extends Controller
         Cookie::queue(Cookie::forget('email'));
         Cookie::queue(Cookie::forget('essay'));
         Cookie::queue(Cookie::forget('questinarie'));
+
+        $this->getViewShareActive(array('home'=>'active'));
         return View::make('web.home');
     }
 
@@ -68,16 +71,23 @@ class WebController extends Controller
         return View::make('web.register');
     }
 
+    public function  getLineamientosGenerales(){
+        $this->getViewShareActive(array('general-guidelines'=>'active'));
+        return View::make('web.general-guidelines');
+    }
 
     public function  getOpinionYAnalisis(){
+        $this->getViewShareActive(array('opinion-analitycs'=>'active'));
         return View::make('web.opinion-analitycs');
     }
 
     public function getSitiosDeInteres(){
+        $this->getViewShareActive(array('interest-site'=>'active'));
         return View::make('web.interest-site');
     }
 
     public function getBusqueda(){
+        $this->getViewShareActive(array('search'=>'active'));
         return View::make('web.search');
     }
 
@@ -98,6 +108,9 @@ class WebController extends Controller
 
 
 
+    public function getAvisoDePrivacidad(){
+        return View::make('web.notice-privacy');
+    }
 
 
 
@@ -154,6 +167,8 @@ class WebController extends Controller
     public function postSearch(){
         $search =  Request::input('search');
         $Constitucion = Constitucion::where('description', 'LIKE', "%{$search}%")->get();
+
+        $this->getViewShareActive(array('search'=>'active'));
         return View::make('web.search-list', compact('Constitucion'));
     }
 
@@ -265,5 +280,11 @@ class WebController extends Controller
         return Redirect::to('/web/index');
 
 
+    }
+
+
+
+    private function getViewShareActive($active){
+        View::share('viewshare', $active);
     }
 }
