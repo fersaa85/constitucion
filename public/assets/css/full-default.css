@@ -4,6 +4,9 @@
 p,a,span,div,h2,h3,h4,h5,label{
     font-family: nexa_regularregular;
 }
+a, a:hover, a:visited {
+    color: #000
+}
 
 h1{
     text-transform: uppercase;
@@ -32,7 +35,7 @@ body{
    background-color: #007e47;
 }
 .bg-grey{
-    padding: 20px;
+    padding: 50px;
     background: #f0f0f0;
 }
 
@@ -110,11 +113,12 @@ section{
     background-color: #25200d;
 }
 .navbar-default .navbar-nav > li > a{
-    width: 140px;
+    width: 135px;
     color: #fff !important;
     display: table-cell;
     vertical-align: middle;
     font-family: nexa_boldregular, serif;
+    font-size: 12px;
 }
 
 .navbar-default .navbar-nav > .active > a,
@@ -198,15 +202,15 @@ section{
 .social-network li{
     float: right;
     display: block;
-    width: 30px;
-    height: 30px;
+    width: 27px;
+    height: 27px;
     margin: 0 2px;
     background: #25200d;
 }
 .social-network li a{
     display: block;
-    width: 30px;
-    height: 30px;
+    width: 27px;
+    height: 27px;
 }
 .social-network li a.facebook {
      background: url('../images/icon-facebook.png') no-repeat;
@@ -240,14 +244,14 @@ section{
  * home
  ********/
 .margin-top-20{
-    margin-top: 20px;
+    margin-top: 5px;
 }
 .bg-senado{
     padding: 0px 20px;
     background: #fff;
 }
 .bg-senado-de-la-republica{
-    width: 170px;
+    width: 160px;
     height: 300px;
     background-size: contain;
     background-color: #fff;
@@ -259,10 +263,15 @@ section{
 .bg-opacity-white{
     background: rgba(255, 255, 255, 0.6);
     padding: 20px;
-    width: 560px;
+    width: 590px;
     height: 300px;
+    padding-right: 0px;
+    padding-left: 10px;
 }
 
+.bg-opacity-white h4{
+    margin-top: 60px;
+}
 
 .col-buttoms{
     padding-right: 0px;
@@ -272,7 +281,7 @@ section{
 }
 
 .col-buttoms ul li a {
-    width: 202px;
+    width: 185px;
     display: block;
     background: red;
     float: right;
@@ -287,17 +296,33 @@ section{
 .col-buttoms ul li a.active {
     background: #007e47;
 }
+.btn-participation{
+    width: 185px;
+    display: block;
+    background: red;
+    float: right;
+    text-align: center;
+    color: #fff !important;
+    margin-bottom: 5px;
+    margin-top: 5px;
+    text-decoration: none;
+    padding: 10px 0px;
+    font-family: nexa_boldregular;
+    position: relative;
+    left: -85px;
+    text-decoration:  none !important;
+}
 
 
 .icon-download{
     display: block;
-    width: 30px;
+    width: 25px;
     height: 30px;
     background: url('../images/icon-descarga.png') no-repeat;
     background-size: contain;
     position: absolute;
-    MARGIN-top: -35px;
-    margin-left: 165px;
+    margin-top: -35px;
+    margin-left: 155px;
 }
 
 .buttom-image{
@@ -434,6 +459,7 @@ form[name=frmSearch] input[name=search]{
 .dropzone  .dz-message p {
     width: 300px;
     margin: 30px auto 0px auto;
+    color: #b1b1b1;
 }
 .dropzone  .dz-message p span{
     display: block;
@@ -560,7 +586,9 @@ form[name=frmSearch] input[name=search]{
 
 }
 
-#chequed{display:none;}
+#chequed{
+    opacity: 0;
+}
 
 input[type=text] {
     width: 100%;
@@ -662,8 +690,15 @@ form[name=frmQuestinarie]{
 
 
 
-
-
+/************
+ * SEE MORE
+ ************/
+.nuevos-botones li a.btn-see-more{
+    color: #fff;
+    background: #25200d;
+    width: 100px;
+    margin-left: 10px;
+}
 
 
 
@@ -785,19 +820,27 @@ footer ul li a.prelative{
  All  screen (max-width: 10170)
  min  screen  320px)
 */
-@media only screen and (max-width: 1070px) {
+@media only screen and (max-width: 1280px) {
 
     .navbar-default .navbar-nav > li > a {
-        width: 135px;
+        width: 100px;
+        font-size: 12px;
+        padding: 7px;
     }
 
     .search-constitution li{
         width: 140px;
         padding: 10px;
     }
+    .bg-senado{
+        display:  none;
+    }
+    .vertical-white-line{
+        display: none !important;
+    }
+
 
 }
-
 
 /* CELULARES
  All  screen (max-width: 750px)
@@ -805,6 +848,35 @@ footer ul li a.prelative{
 */
 @media only screen and (max-width: 750px) {
 
+    #navbar{
+        padding-bottom: 10px;
+    }
+    .dropdown-menu{
+        display: none !important;
+    }
+
+
+    .navbar-nav{
+        margin: 0px;
+    }
+    .nav > li{
+        width: 100%;
+        height: 30px;
+    }
+
+    .navbar-subar{
+        margin-bottom: 10px;
+        padding-right: 15px;
+        padding-left: 15px;
+    }
+    .navbar-subar .title{
+        padding: 0px;
+        margin: 0px;
+    }
+
+    .line-grey-right{
+        display: none;
+    }
 
     .clear-padding-left-right,
     .social-network {
@@ -817,14 +889,40 @@ footer ul li a.prelative{
     .bg-opacity-white{
         width:  auto;
         height: auto;
+        margin-bottom: 25px;
+    }
+    .margin-top-20 {
+        margin-top: 25px;
     }
 
     .bg-senado-de-la-republica{
         display: none;
     }
+    .buttom-image {
+        width: 50%
+    }
 
+    h1{
+        padding-left: 35px;
+        font-size: 25px;
+    }
+    .search{
+        padding: 50px;
+    }
+    .search-constitution li{
+        width: 100%;
+    }
+
+    .content-article {
+        max-height: 180px;
+    }
+    .line-grey-bottom{
+        padding-top: 25px;
+    }
     .col-buttoms ul{
         padding: 0px;
+        width: 50%;
+        margin: 0 auto;
     }
     .col-buttoms ul li a{
         width: 100%;
@@ -838,16 +936,32 @@ footer ul li a.prelative{
     .dropzone{
         width: auto;
     }
+    .dropzone .dz-message p{
+        width: 100%;
+        padding: 10px;
+    }
 
     .div-radio{
         font-family: nexa_regularregular;
         font-size: 11px;
     }
 
+    form[name=frmQuestinarie]{
+        padding: 0px;
+    }
+    form[name=frmQuestinarie] input[type=text]{
+        width: 100% !important;
+        height: auto !important;
+    }
     .opcion, .opcion1, .opcion2,
     .opcion3, .opcion4, .opcion5,
     .opcion6, .opcion7, .opcion8{
         padding: 5px;
+        width: 80%;
+    }
+
+    .box-50{
+        width: 50px;
     }
 
     .cero-margin-padding{

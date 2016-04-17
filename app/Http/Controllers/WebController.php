@@ -25,6 +25,9 @@ use View;
 use App\Models\Register;
 use App\Models\Constitucion;
 use App\Models\Questinarie;
+use App\Models\ConstitucionNino;
+use App\User;
+
 
 session_start();
 
@@ -33,7 +36,7 @@ class WebController extends Controller
 {
 
     public function __construct(){
-        View::share('site_domine', URL::to('/web') . "/" );
+        View::share('site_domine', URL::to('/') );
         View::share('viewshare', null);
     }
 
@@ -81,8 +84,8 @@ class WebController extends Controller
         return View::make('web.opinion-analitycs');
     }
 
-    public function getSitiosDeInteres(){
-        $this->getViewShareActive(array('interest-site'=>'active'));
+    public function getOpiniones(){
+        $this->getViewShareActive(array('opinions'=>'active'));
         return View::make('web.interest-site');
     }
 
@@ -113,7 +116,18 @@ class WebController extends Controller
     }
 
 
+    public function getConvocatoria(){
+        return View::make('web.participation');
+    }
 
+    public function getQueEs(){
+        $this->getViewShareActive(array('what-it-is'=>'active'));
+        return View::make('web.what-is-it');
+    }
+
+    public function getVerMas(){
+        return View::make('web.see-more');
+    }
 
 
     /*
@@ -121,26 +135,70 @@ class WebController extends Controller
      */
 
     public function postRegister(){
-        $validator = Validator::make(  Request::all(), [
-            'email' => 'required|unique:register',
-        ]);
-        if ($validator->fails()) {
-            return Redirect::back()
-                ->withErrors($validator)
-                ->withInput();
+
+
+
+        $Register = Register::where('email', '=', Request::input('email'))->first();
+        if(  $Register !== null ){
+
+                if( Cookie::has('essay') ){
+                    if( empty($Register->essay) ){
+                        Session::flash('thanks', true);
+                        return  $this->getRegisterComplete($Register);
+                    }
+                }
+
+
+                if( Cookie::has('questinarie') ){
+                    if( empty($Register->questinarie) ){
+                        Session::flash('thanks', true);
+                        return  $this->getRegisterComplete($Register);
+                    }
+                }
+
+
+                $validator = Validator::make(  Request::all(), [
+                    'email' => 'required|unique:register',
+                ]);
+
+                if ($validator->fails()) {
+                    return Redirect::back()
+                        ->withErrors($validator)
+                        ->withInput();
+                }
+
+        }else{
+
+
+            $validator = Validator::make(  Request::all(), [
+                'email' => 'required|unique:register',
+            ]);
+
+            if ($validator->fails()) {
+                return Redirect::back()
+                    ->withErrors($validator)
+                    ->withInput();
+            }
+
+
+            $Register = new Register( Request::all() );
+            $Register->save();
+
+
+            Session::flash('thanks', true);
+            return  $this->getRegisterComplete($Register);
+
         }
 
-        $Register = new Register( Request::all() );
-        $Register->save();
 
 
-        Session::flash('thanks', true);
-        return  $this->getRegisterComplete($Register);
 
     }
 
 
     public function postRegisterContinue(){
+
+
 
 
         $validator = Validator::make(  Request::all(), [
@@ -165,11 +223,24 @@ class WebController extends Controller
 
 
     public function postSearch(){
+
+        $type = Request::input('type', 'adult');
         $search =  Request::input('search');
-        $Constitucion = Constitucion::where('description', 'LIKE', "%{$search}%")->get();
+
+        $title = "";
+        if( $type == 'boy' ){
+            $Constitucion = ConstitucionNino::where('description', 'LIKE', "%{$search}%")->get();
+            $title = "Constitucion para niños";
+        }else{
+            $Constitucion = Constitucion::where('description', 'LIKE', "%{$search}%")->get();
+            $title = "Constitución Política de los Estados Unidos Mexicanos";
+        }
+
+
 
         $this->getViewShareActive(array('search'=>'active'));
-        return View::make('web.search-list', compact('Constitucion'));
+        return View::make('web.search-list', compact('Constitucion',
+                                                     'title'));
     }
 
 
@@ -179,7 +250,7 @@ class WebController extends Controller
     public function postUpload(){
 
         $file 	   = Input::file("file");
-        $name = $file->getClientOriginalName() ;
+        $name = date("YmdHis") ."-". $file->getClientOriginalName() ;
         Cookie::queue("essay",  $name, (60*24*365));
 
 
@@ -206,7 +277,7 @@ class WebController extends Controller
             Session::flash('thanks', true);
             return $this->getRegisterComplete();
         }else{
-            return Redirect::to('web/registro');
+            return Redirect::to('registro');
         }
 
 
@@ -227,7 +298,7 @@ class WebController extends Controller
         else{
             $redirect = 'reglas-ensayo';
         }
-        return Redirect::to("web/$redirect");
+        return Redirect::to("$redirect");
     }
 
 
@@ -242,13 +313,19 @@ class WebController extends Controller
 
 
             if(Cookie::get('essay')){
-                $Register->essay = Cookie::get('essay');
 
+                if( empty($Register->essay) ){
+                    $Register->essay = Cookie::get('essay');
+                }
 
             }
 
             if(Cookie::get('questinarie')){
-                $Register->questinarie = Cookie::get('questinarie');
+
+                if( empty($Register->questinarie) ){
+                    $Register->questinarie = Cookie::get('questinarie');
+                }
+
             }
 
             $Register->save();
@@ -277,7 +354,7 @@ class WebController extends Controller
         if (Request::ajax()){
             return Response::json(array("model"=>false,));
         }
-        return Redirect::to('/web/index');
+        return Redirect::to('index');
 
 
     }
@@ -287,4 +364,27 @@ class WebController extends Controller
     private function getViewShareActive($active){
         View::share('viewshare', $active);
     }
+
+
+
+
+
+
+
+    /***************
+     * ADMIN
+     ***************/
+    public function getUsers(){
+
+        $User = new User();
+        $User->name = 'fer';
+        $User->email = 'fersaavedra85@hotmail.com';
+        $User->password = Hash::make('123qaz');
+        $User->save();
+
+    }
+
+
+
+
 }

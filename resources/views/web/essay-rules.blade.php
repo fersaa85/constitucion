@@ -1,7 +1,7 @@
 @extends('template')
 
 @section('title')
-    <p class="title">participacion / ensayo</p>
+    <p class="title">participación / Formas de Participar  / ensayo</p>
 @stop()
 
 
@@ -19,15 +19,18 @@
         <div class="row">
             <div class="col-md-2"></div>
             <div class="col-md-8 bg-grey">
-                <p>augue semper facilisis vel a dolor. Nam vel enim non enim tempus semper. Nunc rhoncus, arcu sit amet malesuada euismod, enim ligula facilisis diam, at rutrum tortor magna ut lectus. Sed posuere leo elit, ut vestibulum nunc tempor ornare. Suspendisse pharetra lacinia urna at ultrices. Donec vitae eros eget sem molestie tristique. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Suspendisse nulla dui, dapibus vitae orci sed, vehicula auctor augue. Aliquam sed metus quis diam gravida bibendum vel eget felis. Phasellus eu leo sed ipsum luctus porttitor eu in lacus. Aenean tempor ultricies convallis.
-                    <p>Nam tempor ornare est ac scelerisque. Proin ornare pharetra nibh elementum elementum. Aliquam condimentum aliquam neque accumsan maximus. Suspendisse mauris turpis, dictum eu ligula eget, cursus rutrum augue. Curabitur convallis sem non dolor accumsan, ac gravida tortor hendrerit. In vestibulum lacus est, a pulvinar nulla scelerisque sit amet. Donec luctus massa est, ac venenatis neque porta id. Nulla rhoncus a nulla ut porttitor. Interdum et malesuada fames ac ante ipsum primis in faucibus. Nunc sit amet justo fringilla, vulputate ante eu, porta mauris. Nulla vestibulum efficitur tellus, eu scelerisque turpis rutrum sed. Nulla vehicula, elit eu euismod rhoncus, lectus velit convallis augue, in vulputate mauris risus non justo. Vestibulum lacinia semper semper. Quisque leo erat, malesuada a vulputate non, volutpat cursus erat. Curabitur accumsan bibendum fermentum.
+                <p>
+                    Quienes así lo deseen podrán elaborar y hacer llegar a la Comisión un escrito en prosa, con carácter y estilo personales, en el cual desarrollen sus ideas sobre uno o varios temas o subtemas determinados, relacionados con la Constitución mexicana (puede ser alguno de los enlistados en la BASE QUINTA), o bien, acerca de uno o varios de sus artículos, fracciones, párrafos, apartados e incisos. Los ensayos deberán tener una extensión mínima de 10 cuartillas y una máxima de 30; estar escritos en letra tipo Arial, número 12, con interlineado 1.15, hoja tamaño carta con orientación vertical; e invariablemente deberán responder a las siguientes cuestiones:<br />
+                    1.	¿Considera necesario mantener, suprimir, o bien, modificar el tema, artículo o artículos a los que se refiere en el ensayo?<br />
+                    2.	En caso de que su postura sea la de modificar en todo o en parte el tema, artículo o artículos que trata en su ensayo ¿qué texto específicamente propondría en su lugar?<br />
+                    3.	¿Qué razones tiene para sostener su postura?<br />
+                    Asimismo, los ensayos deberán contar con una cantidad adecuada de notas 	al pie y fuentes de consulta, las que deberán desarrollarse de acuerdo con los criterios editoriales del Instituto de Investigaciones Jurídicas de la 	Universidad Nacional Autónoma de México 	<a href="http://www.juridicas.unam.mx/publica/critedit/critedit.pdf" target="_blank" class="color-red">(http://www.juridicas.unam.mx/publica/critedit/critedit.pdf)</a>.
+
                 </p>
-                <p> Sed mauris leo, dapibus a sem eget, vestibulum ultricies sapien. Etiam ut arcu eu turpis faucibus sollicitudin nec eu sem. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Duis ac turpis justo. Donec a augue elit. Praesent euismod, ante et lobortis ultricies, sem ex pretium nulla, at accumsan magna urna et elit. Pellentesque sit amet dictum mauris.</p>
-                </p>
 
 
 
-                <a href="ensayo" class="text-uppercase text-center buttom-register">Registrarse y enviar</a>
+                <a href="ensayo" class="text-uppercase text-center buttom-register">Participa<br />aquí</a>
             </div>
             <div class="col-md-2"></div>
 

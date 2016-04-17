@@ -10,9 +10,22 @@
 | and give it the controller to call when that URI is requested.
 |
 */
-
+/*
 Route::get('/', function () {
     return view('welcome');
 });
+*/
+Route::controller('admin', 'AdminController');
+Route::controller('/', 'WebController');
 
-Route::controller('web', 'WebController');
+
+
+
+
+/*
+Route::group(['prefix' => 'admin',
+        'middleware'=> 'auth'], function () {
+
+
+});
+*/

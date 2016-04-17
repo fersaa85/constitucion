@@ -14,8 +14,20 @@ class DatabaseSeeder extends Seeder
     {
         Model::unguard();
 
-        // $this->call('UserTableSeeder');
+        $this->call('UserTableSeeder');
 
         Model::reguard();
     }
+}
+
+class UserTableSeeder extends Seeder {
+
+    public function run()
+    {
+        DB::table('users')->delete();
+
+        User::create(['email' => 'fersaavedra85@hotmail',
+                      'password'=> '123qaz']);
+    }
+
 }

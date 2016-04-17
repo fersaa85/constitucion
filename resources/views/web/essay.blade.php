@@ -1,7 +1,7 @@
 @extends('template')
 
 @section('title')
-    <p class="title">participacion / registro / ensayo</p>
+    <p class="title">participación / Formas de Participar  / ensayo</p>
 @stop()
 
 @section('body')
@@ -22,7 +22,7 @@
 
 
                 <!--
-                <form action="{{ url('web/upload')}}" class="dropzone" ></form>
+                <form action="{{ url('upload')}}" class="dropzone" ></form>
                 -->
                 <div id="dZUpload" class="dropzone">
                     <div class="dz-default dz-message">

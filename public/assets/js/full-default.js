@@ -10,7 +10,12 @@ $(document).ready(function(){
         $("#openModalThanks").modal();
     }
 
-    
+    $('.search-constitution .buttom-search').click(function (e) {
+        e.preventDefault();
+        $('.search-constitution li').removeClass('active');
+        $(this).parent().addClass('active');
+        $('input[name=type]').val( $(this).attr('href') );
+    })
     
 
 

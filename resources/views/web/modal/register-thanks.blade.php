@@ -3,8 +3,10 @@
     <div class="modal-dialog">
         <!-- Modal content-->
         <div class="modal-content">
-            <p>Lorem Ipsum es simplemente el texto de relleno de las imprentas y </p>
-            <p>Lorem Ipsum es simplemente el texto de relleno de las imprentas y </p>
+            <p>¡Gracias por participas!<br />
+            La información se ha <br />enviado con exito</p>
+            <p>Consulta los resultados<br />a partir del 15 de diciembre <br />del 2016 <br /></p>
+            <p>ok</p>
         </div>
     </div>
 </div>

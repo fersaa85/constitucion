@@ -15,16 +15,18 @@
                         <div class="bg-senado-de-la-republica"></div>
                    </div>
                    <div class="pull-left bg-opacity-white">
-                    <h1 class="text-uppercase nexa_blackregular">Consulta democrática sobre la cosntitución mexicana </h1>
-                    <h4 class="nexa_boldregular">Es un hecho establecido hace demasiado tiempo que un lector se distraerá con el contenido del texto de un sitio mientras que mira su diseño. El punto de usar Lorem Ipsum es que tiene una distribución más o menos normal de las letras, </h4>
+                    <h2 class="text-uppercase">Consulta Democrática Nacional sobre la Constitución Mexicana</h2>
+                    <h4 class="nexa_boldregular">Comisión Especial para el Diagnóstico y Reflexión<br />sobre el Texto que Conforma la Constitución Política<br />de los Estados Unidos Mexicanos</h4>
                    </div>
 
                 </div>
-                <div class="col-md-2 col-buttoms  clear-padding-left-right"">
+                <div class="col-md-2 col-buttoms  clear-padding-left-right">
                     <ul>
-                        <li><a href="" class="text-uppercase">¿Qué es?</a></li>
+						<!--
+                        <li><a href="que-es" target="_blank" class="text-uppercase">¿Qué es?</a></li>
                         <li><a href="assets/download/sample.pdf" target="_blank" class="text-uppercase">Bases de <br />participación<span class="icon-download"></span></a></li>
-                        <li><a href="#" class="active text-uppercase join-now">Participar <br />ahora</a></li>
+						-->
+                        <li><a href="#" class="text-uppercase join-now">Participar <br />ahora</a></li>
 
                     </ul>
                 </div>
@@ -37,14 +39,14 @@
 
             </div>
             <div class="col-md-8">
-                <div class="col-md-6 line-grey-right">
-               <p>Hay muchas variaciones de los pasajes de Lorem Ipsum disponibles, pero la mayoría sufrió alteraciones en alguna manera, ya sea porque se le agregó humor, o palabras aleatorias que no parecen ni un poco creíbles. Si vas a utilizar un pasaje de Lorem Ipsum, necesitás estar seguro de que no hay nada avergonzante escondido en el medio del texto. Todos los generadores de Lorem Ipsum que se encuentran en Internet tienden a repetir trozos predefinidos cuando sea necesario, haciendo a este el único generador verdadero (válido) en la Internet. Usa un diccionario de mas de 200 palabras provenientes del latín, combinadas con estructuras muy útiles de sentencias, para generar texto de Lorem Ipsum que parezca razonable. Este Lorem Ipsum generado siempre estará libre de repeticiones, humor agregado o palabras no características del lenguaje, etc.</p>
-                <p>Es un hecho establecido hace demasiado tiempo que un lector se distraerá con el contenido del texto de un sitio mientras que mira su diseño. El punto de usar Lorem Ipsum es que tiene una distribución más o menos normal de las letras, al contrario de usar textos como por ejemplo "Contenido aquí, contenido aquí". Estos textos hacen parecerlo un español que se puede leer. Muchos paquetes de autoedición y editores de páginas web usan el Lorem Ipsum como su texto por defecto, y al hacer una búsqueda de "Lorem Ipsum" va a dar por resultado muchos sitios web que usan este texto si se encuentran en estado de desarrollo. Muchas versiones han evolucionado a través de los años, algunas veces por accidente, otras veces a propósito (por ejemplo insertándole humor y cosas por el estilo).</p>
-               </div>
-                <div class="col-md-6">
-                    <p>Hay muchas variaciones de los pasajes de Lorem Ipsum disponibles, pero la mayoría sufrió alteraciones en alguna manera, ya sea porque se le agregó humor, o palabras aleatorias que no parecen ni un poco creíbles. Si vas a utilizar un pasaje de Lorem Ipsum, necesitás estar seguro de que no hay nada avergonzante escondido en el medio del texto. Todos los generadores de Lorem Ipsum que se encuentran en Internet tienden a repetir trozos predefinidos cuando sea necesario, haciendo a este el único generador verdadero (válido) en la Internet. Usa un diccionario de mas de 200 palabras provenientes del latín, combinadas con estructuras muy útiles de sentencias, para generar texto de Lorem Ipsum que parezca razonable. Este Lorem Ipsum generado siempre estará libre de repeticiones, humor agregado o palabras no características del lenguaje, etc.</p>
-                    <p>Es un hecho establecido hace demasiado tiempo que un lector se distraerá con el contenido del texto de un sitio mientras que mira su diseño. El punto de usar Lorem Ipsum es que tiene una distribución más o menos normal de las letras, al contrario de usar textos como por ejemplo "Contenido aquí, contenido aquí". Estos textos hacen parecerlo un español que se puede leer. Muchos paquetes de autoedición y editores de páginas web usan el Lorem Ipsum como su texto por defecto, y al hacer una búsqueda de "Lorem Ipsum" va a dar por resultado muchos sitios web que usan este texto si se encuentran en estado de desarrollo. Muchas versiones han evolucionado a través de los años, algunas veces por accidente, otras veces a propósito (por ejemplo insertándole humor y cosas por el estilo).</p>
-               </div>
+                <div class="col-md-1"></div>
+                <div class="col-md-5 line-grey-right">
+                    <p class="text-justify">Las senadoras y los senadores te damos la más cordial bienvenida a este sitio. Lo hemos diseñado y puesto en funcionamiento pensando en ti y buscando tu participación. Como probablemente habrás escuchado, el 05 de febrero del próximo año la Constitución mexicana, la ley más importante de todas las personas que formamos este gran país, cumplirá 100 años de estar viva y de proteger nuestros derechos. ¡Si, los mexicanos tenemos una de las constituciones más antiguas del mundo! Por ese motivo estamos de fiesta y queremos que tú seas parte. Es sencillo y muy importante que te </p>
+                </div>
+                <div class="col-md-5">
+                    <p class="text-justify">unas. ¿Cómo? Participando en la Consulta Democrática Nacional para que reflexiones y des tu opinión acerca de los valores, los derechos y deberes señalados en la Constitución. Puedes hacerlo respondiendo a un breve cuestionario o enviando un ensayo. Aquí te decimos cómo y te ofrecemos información para que conozcas mejor nuestra Ley Fundamental, así como algunas opiniones y reflexiones acerca de ella.</p>
+                </div>
+                <div class="col-md-1"></div>
             </div>
             <div class="col-md-2">
 

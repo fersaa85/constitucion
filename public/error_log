@@ -1,0 +1,23 @@
+[05-Apr-2016 19:16:22 America/Denver] PHP Parse error:  syntax error, unexpected 'class' (T_CLASS), expecting identifier (T_STRING) or variable (T_VARIABLE) or '{' or '$' in /home2/consunx3/public_html/public/index.php on line 50
+[05-Apr-2016 19:17:04 America/Denver] PHP Parse error:  syntax error, unexpected 'class' (T_CLASS), expecting identifier (T_STRING) or variable (T_VARIABLE) or '{' or '$' in /home2/consunx3/public_html/public/index.php on line 50
+[05-Apr-2016 19:17:11 America/Denver] PHP Parse error:  syntax error, unexpected 'class' (T_CLASS), expecting identifier (T_STRING) or variable (T_VARIABLE) or '{' or '$' in /home2/consunx3/public_html/public/index.php on line 50
+[05-Apr-2016 19:18:33 America/Denver] PHP Parse error:  syntax error, unexpected 'class' (T_CLASS), expecting identifier (T_STRING) or variable (T_VARIABLE) or '{' or '$' in /home2/consunx3/public_html/public/index.php on line 50
+[05-Apr-2016 19:18:34 America/Denver] PHP Parse error:  syntax error, unexpected 'class' (T_CLASS), expecting identifier (T_STRING) or variable (T_VARIABLE) or '{' or '$' in /home2/consunx3/public_html/public/index.php on line 50
+[05-Apr-2016 19:19:00 America/Denver] PHP Parse error:  syntax error, unexpected 'class' (T_CLASS), expecting identifier (T_STRING) or variable (T_VARIABLE) or '{' or '$' in /home2/consunx3/public_html/public/index.php on line 50
+[05-Apr-2016 19:19:07 America/Denver] PHP Parse error:  syntax error, unexpected 'class' (T_CLASS), expecting identifier (T_STRING) or variable (T_VARIABLE) or '{' or '$' in /home2/consunx3/public_html/public/index.php on line 50
+[05-Apr-2016 19:20:05] PHP Warning:  Unexpected character in input:  '\' (ASCII=92) state=1 in /home2/consunx3/public_html/public/index.php on line 50
+[05-Apr-2016 19:20:05] PHP Parse error:  syntax error, unexpected T_STRING in /home2/consunx3/public_html/public/index.php on line 50
+[05-Apr-2016 19:20:11] PHP Warning:  Unexpected character in input:  '\' (ASCII=92) state=1 in /home2/consunx3/public_html/public/index.php on line 50
+[05-Apr-2016 19:20:11] PHP Parse error:  syntax error, unexpected T_STRING in /home2/consunx3/public_html/public/index.php on line 50
+[05-Apr-2016 19:20:12] PHP Warning:  Unexpected character in input:  '\' (ASCII=92) state=1 in /home2/consunx3/public_html/public/index.php on line 50
+[05-Apr-2016 19:20:12] PHP Parse error:  syntax error, unexpected T_STRING in /home2/consunx3/public_html/public/index.php on line 50
+[05-Apr-2016 19:31:29] PHP Warning:  Unexpected character in input:  '\' (ASCII=92) state=1 in /home2/consunx3/public_html/public/index.php on line 50
+[05-Apr-2016 19:31:29] PHP Parse error:  syntax error, unexpected T_STRING in /home2/consunx3/public_html/public/index.php on line 50
+[05-Apr-2016 19:31:42] PHP Warning:  Unexpected character in input:  '\' (ASCII=92) state=1 in /home2/consunx3/public_html/public/index.php on line 50
+[05-Apr-2016 19:31:42] PHP Parse error:  syntax error, unexpected T_STRING in /home2/consunx3/public_html/public/index.php on line 50
+[05-Apr-2016 19:32:18] PHP Warning:  Unexpected character in input:  '\' (ASCII=92) state=1 in /home2/consunx3/public_html/public/index.php on line 50
+[05-Apr-2016 19:32:18] PHP Parse error:  syntax error, unexpected T_STRING in /home2/consunx3/public_html/public/index.php on line 50
+[05-Apr-2016 19:33:54] PHP Warning:  Unexpected character in input:  '\' (ASCII=92) state=1 in /home2/consunx3/public_html/public/index.php on line 51
+[05-Apr-2016 19:33:54] PHP Parse error:  syntax error, unexpected T_STRING in /home2/consunx3/public_html/public/index.php on line 51
+[05-Apr-2016 19:34:34] PHP Warning:  Unexpected character in input:  '\' (ASCII=92) state=1 in /home2/consunx3/public_html/public/index.php on line 51
+[05-Apr-2016 19:34:34] PHP Parse error:  syntax error, unexpected T_STRING in /home2/consunx3/public_html/public/index.php on line 51

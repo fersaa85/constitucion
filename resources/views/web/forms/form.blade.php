@@ -10,5 +10,10 @@
 
 {!! Form::text('localite', Input::get('localite'), ['class' => 'form-control', 'placeholder' => 'Localidad']) !!}
 
-{!! Form::select('ocupation',array('Ocupacion', 'Estudiante', 'Profecionista'), null, ['class' => 'form-control'] ) !!}
+{!! Form::select('ocupation',array(''=>'Ocupación',
+                                   '1'=>'Estudiante',
+                                   '2'=>'Empleado',
+                                   '3'=>'Desempleado',
+                                   '4'=>'Empresario',
+                                   '5'=>'Hogar'), null, ['class' => 'form-control'] ) !!}
 
