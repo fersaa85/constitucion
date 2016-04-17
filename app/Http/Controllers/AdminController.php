@@ -50,9 +50,18 @@ class AdminController extends Controller
 
     public function getResultados(){
 
-        return View::make('admin.results');
+        $total = Questinarie::all()->count();
+        
+
+       $getStaticsManWonman =  $this->getStaticsManWonman($total);
+
+        //dd($Questinarie);
+
+        return View::make('admin.results', compact('getStaticsManWonman'));
 
     }
+
+
 
 
     /**********
@@ -66,8 +75,23 @@ class AdminController extends Controller
     }
 
 
+    /****************
+     * PRIVATE
+     ***************/
+    private function getPorcent($number,$total){
+        return ($number * 100) / $total;
+    }
 
 
+    private function getStaticsManWonman($total){
+        $array = array('m' => '', 'h' => '');
+
+        foreach ($array as $key => $value){
+            $Questinarie = Questinarie::where('sex', '=', $key )->count();
+            $array[$key] = $this->getPorcent($Questinarie,$total);
+        }
+        return $array;
+    }
 
 
 
