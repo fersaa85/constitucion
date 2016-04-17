@@ -36,6 +36,13 @@ use App\Http\Controllers\CoreController;
 class AdminController extends Controller
 {
     public $core;
+    public $arrayColor = array('bg-red','bg-green', 'bg-black', 'opacity');
+
+    public $returnTmp = array( 'value'=>'',
+                                'color'=> '',
+                                'highlight' => '',
+                                'label'=>'',);
+    public $return;
 
     public function __construct(){
         View::share('site_domine', URL::to('/') );
@@ -91,6 +98,88 @@ class AdminController extends Controller
             $array[$key] = $this->getPorcent($Questinarie,$total);
         }
         return $array;
+    }
+
+    private function  getStaticsStudy($total){
+        $array = array('primaria', 'secundario', 'preparatoria', 'universidad', 'posgrado', 'otro');
+
+        $i = 0;
+        $this->return = array();
+        foreach ($array as  $value){
+            $Questinarie = Questinarie::where('school', '=',  $value )->count();
+
+            $this->returnTmp['value']  =  $this->getPorcent($Questinarie,$total);
+            $this->returnTmp['color'] =  $returnTmp['highlight'] = $this->arrayColor[$i];
+            $this->returnTmp['label'] = $value;
+
+            $i++;
+
+            $this->return[] =  $this->returnTmp;
+
+        }
+
+        return   $this->return;
+
+    }
+
+    private function  getStaticsOcupation($total){
+        $array = array( 'estudiante'=>'Estudiante',
+                        'empleado'=>'Empleado',
+                        'desempleado'=>'Desempleado',
+                        'empresario'=>'Empresario',
+                        'hogar'=>'Hogar');
+
+        $i = 0;
+        $this->return = array();
+        foreach ($array as  $key => $value){
+            $Questinarie = Questinarie::where('ocupation', '=',   $key )->count();
+
+            $this->returnTmp['value']  =  $this->getPorcent($Questinarie,$total);
+            $this->returnTmp['color'] =  $returnTmp['highlight'] = $this->arrayColor[$i];
+            $this->returnTmp['label'] = $value;
+
+            $i++;
+
+            $this->return[] =  $this->returnTmp;
+
+        }
+
+        return   $this->return;
+
+    }
+
+
+    private function  getStaticsParticipation($total){
+
+
+        $this->return = array();
+
+       $Questinarie = Questinarie::where(function($query){
+                                            $query->orWhereNotNull('essay');
+                                            $query->orWhereNotNull('questinarie');
+                                        })->count();
+
+
+            $this->returnTmp['value']  =  $this->getPorcent($Questinarie,$total);
+            $this->returnTmp['color'] =  $returnTmp['highlight'] = $this->arrayColor[1];
+            $this->returnTmp['label'] ="participacion";
+
+
+
+            $this->return[] =  $this->returnTmp;
+
+
+
+            $this->returnTmp['value']  =  100 - $this->getPorcent($Questinarie,$total) ;
+            $this->returnTmp['color'] =  $returnTmp['highlight'] = $this->arrayColor[0];
+            $this->returnTmp['label'] ="Registro";
+
+        $this->return[] =  $this->returnTmp;
+
+
+
+        return   $this->return;
+
     }
 
 
